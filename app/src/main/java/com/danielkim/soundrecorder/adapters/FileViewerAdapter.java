@@ -197,7 +197,7 @@ public class FileViewerAdapter extends RecyclerView.Adapter<FileViewerAdapter.Re
                 mContext,
                 String.format(
                     mContext.getString(R.string.toast_file_delete),
-                    getItem(position).getName()
+                    itm.getName()
                 ),
                 Toast.LENGTH_SHORT
             ).show();
