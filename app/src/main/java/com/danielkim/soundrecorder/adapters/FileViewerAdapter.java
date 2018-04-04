@@ -202,7 +202,7 @@ public class FileViewerAdapter extends RecyclerView.Adapter<FileViewerAdapter.Re
                 Toast.LENGTH_SHORT
             ).show();
 
-            mDatabase.removeItemWithId(getItem(position).getId());
+            mDatabase.removeItemWithId(itm.getId());
             notifyItemRemoved(position);
         }
     }
