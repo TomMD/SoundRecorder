@@ -58,7 +58,7 @@ public class FileViewerAdapter extends RecyclerView.Adapter<FileViewerAdapter.Re
         item = getItem(position);
         long itemDuration = item.getLength();
 
-        long minutes = TimeUnit.MILLISECONDS.toMinutes(itemDuration);
+        long minutes = TimeUnit.MILLISECONDS.toMinutes(itemDuration - item.getLength());
         long seconds = TimeUnit.MILLISECONDS.toSeconds(itemDuration)
                 - TimeUnit.MINUTES.toSeconds(minutes);
 
