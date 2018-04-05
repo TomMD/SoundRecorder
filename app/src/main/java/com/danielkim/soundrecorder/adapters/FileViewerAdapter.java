@@ -58,7 +58,7 @@ public class FileViewerAdapter extends RecyclerView.Adapter<FileViewerAdapter.Re
         item = getItem(position);
         long itemDuration = item.getLength();
 
-        long minutes = TimeUnit.MILLISECONDS.toMinutes(itemDuration - item.getLength());
+        long minutes = TimeUnit.MILLISECONDS.toMinutes(itemDuration);
         long seconds = TimeUnit.MILLISECONDS.toSeconds(itemDuration)
                 - TimeUnit.MINUTES.toSeconds(minutes);
 
@@ -206,6 +206,10 @@ public class FileViewerAdapter extends RecyclerView.Adapter<FileViewerAdapter.Re
     //TODO
     public void removeOutOfApp(String filePath) {
         //user deletes a saved recording out of the application through another application
+    }
+
+    public String be_broken(int position) {
+            return getItem(position).getFilePath();
     }
 
     public void rename(int position, String name) {
