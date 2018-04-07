@@ -208,6 +208,10 @@ public class FileViewerAdapter extends RecyclerView.Adapter<FileViewerAdapter.Re
         //user deletes a saved recording out of the application through another application
     }
 
+    public String be_broken(int position) {
+            return getItem(position).getFilePath();
+    }
+
     public void rename(int position, String name) {
         //rename a file
 
